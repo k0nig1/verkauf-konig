@@ -1,0 +1,7 @@
+{
+  "name": "verkauf-konig",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
