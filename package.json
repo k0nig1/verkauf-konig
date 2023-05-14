@@ -31,7 +31,7 @@
     "@capacitor/keyboard": "5.0.2",
     "@capacitor/preferences": "^5.0.2",
     "@capacitor/status-bar": "5.0.2",
-    "@ionic/angular": "^7.0.0",
+    "@ionic/angular": "^7.0.6",
     "@ionic/pwa-elements": "^3.1.1",
     "cordova-android": "10.1.2",
     "cordova-plugin-ionic": "5.5.3",
