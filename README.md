@@ -6,9 +6,14 @@ In German, Verkaufen means 'to sell,' and König means 'King.' So, 'SellKing,' o
 This App is meant to replace waiters and waitresses 
 # Setup
 In order to run this project on your machine, you must complete the following:
+
 NodeJS: https://nodejs.org/en/download
+
 Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
 Ionic: https://ionicframework.com/docs/intro/cli
+
+VSCode: https://code.visualstudio.com/ **You'll want the ionic plugin too
 
 ~~~bash
 # to install needed node packages
