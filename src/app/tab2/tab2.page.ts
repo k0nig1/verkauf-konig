@@ -17,8 +17,8 @@ export class Tab2Page {
   videoElement: any;
   canvasContext: any;
   scanActive = false;
-  scanResult = null;
-  loading: HTMLIonLoadingElement = null;
+  scanResult: any;
+  loading: any;
 
   constructor(
     private toastCtrl: ToastController,
@@ -30,6 +30,13 @@ export class Tab2Page {
     if (this.plt.is('ios') && isInStandaloneMode()) {
       console.log('I am a an iOS PWA!');
       // E.g. hide the scan functionality!
+    }
+
+    this.loading = async () => {
+      this.loading = await loadingCtrl.create({
+        message: "Loading. Please wait",
+        duration: 10000 // 10 seconds
+      });
     }
   }
 
@@ -57,11 +64,22 @@ export class Tab2Page {
   }
 
   reset() {
-    this.scanResult = null;
+    this.scanResult = "";
   }
 
   stopScan() {
     this.scanActive = false;
+    const stream = this.videoElement.srcObject;
+    let tracks = [];
+    tracks = stream.getTracks();
+    // tracks.forEach(function (track) {
+    //   track.stop();
+    // });
+    for (let track of tracks) {
+      track.stop();
+    }
+
+    this.videoElement.srcObject = null;
   }
 
   async startScan() {
@@ -85,7 +103,7 @@ export class Tab2Page {
     if (this.videoElement.readyState === this.videoElement.HAVE_ENOUGH_DATA) {
       if (this.loading) {
         await this.loading.dismiss();
-        this.loading = null;
+        this.loading = new HTMLIonLoadingElement;
         this.scanActive = true;
       }
 
@@ -127,8 +145,15 @@ export class Tab2Page {
     this.fileinput.nativeElement.click();
   }
 
-  handleFile(files: FileList) {
-    const file = files.item(0);
+  //handleFile(event: Event) {
+  handleFile(event: Event) {
+    const element = event.target as HTMLInputElement;
+    let files: FileList | null = element.files;
+    let file: File | null;
+    if (files == null)
+      return;
+    else
+      file = files.item(0);
 
     var img = new Image();
     img.onload = () => {
@@ -148,9 +173,9 @@ export class Tab2Page {
         this.showQrToast();
       }
     };
-    img.src = URL.createObjectURL(file);
-  }
 
+    img.src = URL.createObjectURL(file!);
+  }
 }
 
 
