@@ -36,7 +36,7 @@ export class Tab2Page {
     this.qrScanner.videoElement = this.video.nativeElement;
   }
   captureImage() {
-    this.qrScanner.captureImage();
+    this.qrScanner.captureImage(this.fileinput);
   }
 
   startScan() {
