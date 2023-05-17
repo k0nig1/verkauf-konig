@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { ActionSheetController } from '@ionic/angular';
-import { PhotoService, UserPhoto } from '../services/photo.service';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { ToastController, LoadingController, Platform } from '@ionic/angular';
+import { QrScannerService } from '../services/qr-scanner.service';
 
 @Component({
   selector: 'app-tab2',
@@ -10,39 +10,50 @@ import { PhotoService, UserPhoto } from '../services/photo.service';
 
 export class Tab2Page {
 
-  constructor(public photoService: PhotoService,
-    public actionSheetController: ActionSheetController) { }
+  @ViewChild('video', { static: false }) video!: ElementRef;
+  @ViewChild('canvas', { static: false }) canvas!: ElementRef;
+  @ViewChild('fileinput', { static: false }) fileinput!: ElementRef;
 
-  async ngOnInit() {
-    await this.photoService.loadSaved();
+  qrScanner: QrScannerService;
+  private _scanResult = "";
+  private _scanActive = false;
+  // public gets for above variables
+  public get scanResult() {
+    return this.qrScanner.scanResult;
   }
 
-  addPhotoToGallery() {
-    this.photoService.addNewToGallery();
+  public get scanActive() {
+    return this.qrScanner.scanActive;
   }
 
-  public async showActionSheet(photo: UserPhoto, position: number) {
-    const actionSheet = await this.actionSheetController.create({
-      header: 'Photos',
-      buttons: [{
-        text: 'Delete',
-        role: 'destructive',
-        icon: 'trash',
-        handler: () => {
-          this.photoService.deletePicture(photo, position);
-        }
-      }, {
-        text: 'Cancel',
-        icon: 'close',
-        role: 'cancel',
-        handler: () => {
-          // Nothing to do, action sheet is automatically closed
-        }
-      }]
-    });
-    await actionSheet.present();
+  constructor(qrScanner: QrScannerService) {
+    this.qrScanner = qrScanner;
   }
 
+  ngAfterViewInit() {
+    this.qrScanner.canvasElement = this.canvas.nativeElement;
+    this.qrScanner.canvasContext = this.qrScanner.canvasElement.getContext('2d');
+    this.qrScanner.videoElement = this.video.nativeElement;
+  }
+  captureImage() {
+    this.qrScanner.captureImage();
+  }
+
+  startScan() {
+    this.qrScanner.startScan();
+  }
+
+  stopScan() {
+    this.qrScanner.stopScan();
+  }
+
+  reset() {
+    this.qrScanner.reset();
+  }
+
+  handleFile(ev: Event) {
+    this.qrScanner.handleFile(ev);
+  }
 }
 
 
