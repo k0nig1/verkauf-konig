@@ -16,22 +16,6 @@
   <input #fileinput type="file" accept="image/*" capture="camera" hidden (change)="handleFile($event)" />
   <!-- <input type="file" accept="image/*" capture="camera" /> -->
 
-  <!-- Trigger the file input -->
-  <ion-button expand="full" (click)="captureImage()">
-    <ion-icon slot="start" name="camera"></ion-icon>
-    Capture Image
-  </ion-button>
-
-  <ion-button expand="full" (click)="startScan()">
-    <ion-icon slot="start" name="qr-scanner"></ion-icon>
-    Start scan
-  </ion-button>
-
-  <ion-button expand="full" (click)="reset()" color="warning" *ngIf="scanResult">
-    <ion-icon slot="start" name="refresh"></ion-icon>
-    Reset
-  </ion-button>
-
   <!-- Shows our camera stream -->
   <video #video [hidden]="!scanActive" width="100%"></video>
 
@@ -54,3 +38,21 @@
   </ion-card>
 
 </ion-content>
+
+<ion-footer>
+  <!-- Trigger the file input -->
+  <ion-button expand="full" (click)="captureImage()">
+    <ion-icon slot="start" name="camera"></ion-icon>
+    Capture Image
+  </ion-button>
+
+  <ion-button expand="full" (click)="startScan()">
+    <ion-icon slot="start" name="qr-scanner"></ion-icon>
+    Start scan
+  </ion-button>
+
+  <ion-button expand="full" (click)="reset()" color="warning" *ngIf="scanResult">
+    <ion-icon slot="start" name="refresh"></ion-icon>
+    Reset
+  </ion-button>
+</ion-footer>
