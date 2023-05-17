@@ -8,9 +8,9 @@ import jsQR from 'jsqr';
 })
 export class QrScannerService {
 
-  @ViewChild('video', { static: false }) video!: ElementRef;
-  @ViewChild('canvas', { static: false }) canvas!: ElementRef;
-  @ViewChild('fileinput', { static: false }) fileinput!: ElementRef;
+  video!: ElementRef;
+  canvas!: ElementRef;
+  fileinput!: ElementRef;
 
   canvasElement: any;
   videoElement: any;
@@ -136,8 +136,8 @@ export class QrScannerService {
     }
   }
 
-  captureImage() {
-    this.fileinput.nativeElement.click();
+  captureImage(el: ElementRef) {
+    el.nativeElement.click();
   }
 
   /* 
