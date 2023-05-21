@@ -22,16 +22,16 @@ export class DataService {
     this.db = getFirestore(this.app);
   }
 
-  getRestaurantMenuItems(): Observable<MenuItem[]> {
-    try {
-      let menuItemsCollection = collection(this.db, 'menuItems');
-      return collectionData(menuItemsCollection)
-        .pipe(
-          map(menuItems => menuItems as MenuItem[])
-        );
-    }
-    catch {
-      console.error("[ERROR] Could not get Menu Items!");
-    }
-  }
+  // getRestaurantMenuItems(): Observable<MenuItem[]> {
+  //   try {
+  //     let menuItemsCollection = collection(this.db, 'menuItems');
+  //     return collectionData(menuItemsCollection)
+  //       .pipe(
+  //         map(menuItems => menuItems as MenuItem[])
+  //       );
+  //   }
+  //   catch {
+  //     console.error("[ERROR] Could not get Menu Items!");
+  //   }
+  // }
 }

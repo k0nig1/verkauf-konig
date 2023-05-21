@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
-import { ExploreContainerComponentModule } from '../components/explore-container/explore-container.module';
-import { RestaurantMenuItemsListModule } from '../components/restaurant-menu-items-list/restaurant-menu-items-list.module';
+import { RestaurantMenuModule } from '../components/restaurant-menu/restaurant-menu.module';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 
 @NgModule({
@@ -12,9 +11,8 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
     Tab1PageRoutingModule,
-    RestaurantMenuItemsListModule
+    RestaurantMenuModule
   ],
   declarations: [Tab1Page]
 })
