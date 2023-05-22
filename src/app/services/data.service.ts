@@ -3,7 +3,7 @@ import { FirebaseApp } from '@angular/fire/app';
 import { Firestore, collectionData, collection, getDocs } from '@angular/fire/firestore';
 
 import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
+import { DocumentData, getFirestore } from 'firebase/firestore';
 
 import { Observable, map } from 'rxjs';
 
@@ -22,16 +22,17 @@ export class DataService {
     this.db = getFirestore(this.app);
   }
 
-  // getRestaurantMenuItems(): Observable<MenuItem[]> {
-  //   try {
-  //     let menuItemsCollection = collection(this.db, 'menuItems');
-  //     return collectionData(menuItemsCollection)
-  //       .pipe(
-  //         map(menuItems => menuItems as MenuItem[])
-  //       );
-  //   }
-  //   catch {
-  //     console.error("[ERROR] Could not get Menu Items!");
-  //   }
-  // }
+  getRestaurantMenu(retaurant: string): string {
+    try {
+      let menuCollection = collection(this.db, 'menuItems');
+      // return collectionData(menuCollection)
+      //   .pipe(
+      //     map(menuItems => menuItems as MenuItem[])
+      //   );
+    }
+    catch {
+      console.error("[ERROR] Could not get Menu Items!");
+    }
+    return "yaya"!;
+  }
 }

@@ -45,6 +45,7 @@
     "firebase": "^9.22.0",
     "firebase-admin": "^11.8.0",
     "firebase-tools": "^12.1.0",
+    "firebaseui": "^6.0.2",
     "globby": "^13.1.4",
     "ionicons": "^7.0.0",
     "jsqr": "^1.4.0",
