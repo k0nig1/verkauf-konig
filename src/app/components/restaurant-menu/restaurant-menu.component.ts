@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { DataService } from '../../services/data.service';
 import { RestaurantMenu } from 'src/app/models/restaurant-menu';
 
 @Component({
