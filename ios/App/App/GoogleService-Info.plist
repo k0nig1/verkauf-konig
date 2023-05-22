@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>111216254286-r1e02gmmf6er305rh0ukek8ke4m0bd0s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.111216254286-r1e02gmmf6er305rh0ukek8ke4m0bd0s</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>111216254286-64j3q2iidk3omo9ptqqgd0n0no0kuhgg.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBK4SyCh1KwzjxZTUv9J3gLFvPGXdmHcYc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>111216254286</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.ionic.verkaufk0nig</string>
+	<key>PROJECT_ID</key>
+	<string>verkauf-konig</string>
+	<key>STORAGE_BUCKET</key>
+	<string>verkauf-konig.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:111216254286:ios:234c9b9812ba3fc7ae121f</string>
+</dict>
+</plist>

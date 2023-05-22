@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RestaurantMenu } from '../models/restaurant-menu';
 
 @Component({
   selector: 'app-tab1',

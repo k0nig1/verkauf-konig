@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "verkauf-konig"
+    "default": "verkauf-konig-test"
+  },
+  "targets": {
+    "verkauf-konig-test": {
+      "hosting": {
+        "app": [
+          "verkauf-konig-test"
+        ]
+      }
+    }
   }
 }
