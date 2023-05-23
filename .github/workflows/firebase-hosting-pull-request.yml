@@ -13,5 +13,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VERKAUF_KONIG_TEST }}'
-          projectId: verkauf-konig-test
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VERKAUFK0NIG_7BE02 }}'
+          projectId: verkaufk0nig-7be02
