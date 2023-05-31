@@ -1,0 +1,115 @@
+<mxfile host="Electron" modified="2023-05-31T22:28:37.580Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="h3zRGsVmzg4QmNgc1Tvy" version="21.2.8" type="device">
+  <diagram name="Page-1" id="_VKsZUqjI1KDM406V_db">
+    <mxGraphModel dx="1014" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-144" value="" style="group;fillColor=#182E3E;labelBackgroundColor=none;fontColor=#FFFFFF;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="350" y="50" width="180" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-79" value="Cart" style="html=1;whiteSpace=wrap;verticalAlign=top;fillColor=none;container=0;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-144">
+          <mxGeometry width="180" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-143" value="" style="group;fillColor=none;labelBackgroundColor=none;fontColor=#ffffff;strokeColor=#B20000;" vertex="1" connectable="0" parent="RNJ_qfoteNSc5oWdLL_N-144">
+          <mxGeometry x="10" y="110" width="160" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-111" value="Item" style="html=1;whiteSpace=wrap;verticalAlign=top;fillColor=none;container=0;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-143">
+          <mxGeometry width="160" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-126" value="Add" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-143">
+          <mxGeometry x="10" y="30" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-127" value="Read" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-143">
+          <mxGeometry x="10" y="110" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-128" value="Update" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-143">
+          <mxGeometry x="10" y="190" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-129" value="Delete" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-143">
+          <mxGeometry x="10" y="270" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-44" value="Submit" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-144">
+          <mxGeometry x="20" y="30" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-145" value="" style="group;fillColor=#182E3E;labelBackgroundColor=none;fontColor=#FFFFFF;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="350" y="540" width="180" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-82" value="Restaurant Menu" style="html=1;whiteSpace=wrap;verticalAlign=top;fillColor=none;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-145">
+          <mxGeometry width="180" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-83" value="Add" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-145">
+          <mxGeometry x="20" y="40" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-84" value="Read" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-145">
+          <mxGeometry x="20" y="120" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-86" value="Update" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-145">
+          <mxGeometry x="20" y="200" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-85" value="Delete" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="RNJ_qfoteNSc5oWdLL_N-145">
+          <mxGeometry x="20" y="280" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-100" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-3" target="RNJ_qfoteNSc5oWdLL_N-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-101" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-3" target="RNJ_qfoteNSc5oWdLL_N-126">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="406.37797639940845" y="155.69836937445302" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-103" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-3" target="RNJ_qfoteNSc5oWdLL_N-128">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="387.9319044176657" y="308.39291250800534" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-104" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-3" target="RNJ_qfoteNSc5oWdLL_N-129">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375.80509606227633" y="378.95541389950495" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-3" value="Restaurant Patron" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;direction=east;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="80" y="410" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-96" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-10" target="RNJ_qfoteNSc5oWdLL_N-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-97" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-10" target="RNJ_qfoteNSc5oWdLL_N-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-112" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-10" target="RNJ_qfoteNSc5oWdLL_N-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-10" value="Restaurant Staff" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="750" y="520" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-98" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-10" target="RNJ_qfoteNSc5oWdLL_N-85">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="792" y="469" as="sourcePoint" />
+            <mxPoint x="540" y="601" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-99" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-10" target="RNJ_qfoteNSc5oWdLL_N-86">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="812" y="460" as="sourcePoint" />
+            <mxPoint x="550" y="664" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-102" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-3" target="RNJ_qfoteNSc5oWdLL_N-127">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="396" as="sourcePoint" />
+            <mxPoint x="398.57852289084985" y="233.21462933521843" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-123" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#23445D;fontColor=default;" edge="1" parent="1" source="RNJ_qfoteNSc5oWdLL_N-3" target="RNJ_qfoteNSc5oWdLL_N-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="159" y="458" as="sourcePoint" />
+            <mxPoint x="425" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RNJ_qfoteNSc5oWdLL_N-19" value="Deliver Order" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#182E3E;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="630" y="360" width="140" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
