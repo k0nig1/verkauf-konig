@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { QrScannerService } from '../../services/qr-scanner.service';
+import { QrScannerService } from '../services/qr-scanner.service';
 
 @Component({
   selector: 'app-order',
