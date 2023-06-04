@@ -3,12 +3,12 @@ import { ToastController, LoadingController, Platform } from '@ionic/angular';
 import { QrScannerService } from '../services/qr-scanner.service';
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  selector: 'app-order',
+  templateUrl: 'order.page.html',
+  styleUrls: ['order.page.scss']
 })
 
-export class Tab2Page {
+export class OrderPage {
 
   @ViewChild('video', { static: false }) video!: ElementRef;
   @ViewChild('canvas', { static: false }) canvas!: ElementRef;
