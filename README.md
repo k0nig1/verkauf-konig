@@ -1,8 +1,6 @@
 # verkauf-konig
 ## Description
 This App is meant to provide a seamless way to place an order at a restaurant or service; kind of like Panera, but everywhere!
-## Notes
-In German, Verkaufen means 'to sell,' and König means 'King.' So, 'SellKing,' or something akin (working title).
 ## Setup
 In order to run this project on your machine, you must install the following:
 
