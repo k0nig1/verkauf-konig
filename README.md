@@ -33,5 +33,6 @@ To learn more about AngularJS: https://docs.angularjs.org/guide
 None yet!
 
 # Diagrams
+Diagram Files are draw.io and can be found in /diagrams.
 ## Restaurant Ordering
 ![Restaurant Ordering Design: https://github.com/k0nig1/verkauf-konig/blob/use_case/diagrams/useCase_RestaurantOrdering.drawio.png](https://github.com/k0nig1/verkauf-konig/blob/main/diagrams/useCase_RestaurantOrdering.drawio.png)
