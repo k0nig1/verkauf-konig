@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { QrScannerService } from '../services/qr-scanner.service';
+import { QrScannerService } from '../../services/qr-scanner.service';
 
 @Component({
   selector: 'app-order',
@@ -16,6 +16,7 @@ export class OrderPage {
   qrScanner: QrScannerService;
   private _scanResult = "";
   private _scanActive = false;
+
   // public gets for above variables
   public get scanResult() {
     return this.qrScanner.scanResult;
