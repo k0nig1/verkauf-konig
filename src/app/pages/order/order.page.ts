@@ -1,14 +1,13 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { ToastController, LoadingController, Platform } from '@ionic/angular';
-import { QrScannerService } from '../services/qr-scanner.service';
+import { QrScannerService } from '../../services/qr-scanner.service';
 
 @Component({
-  selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  selector: 'app-order',
+  templateUrl: 'order.page.html',
+  styleUrls: ['order.page.scss']
 })
 
-export class Tab2Page {
+export class OrderPage {
 
   @ViewChild('video', { static: false }) video!: ElementRef;
   @ViewChild('canvas', { static: false }) canvas!: ElementRef;
@@ -17,6 +16,7 @@ export class Tab2Page {
   qrScanner: QrScannerService;
   private _scanResult = "";
   private _scanActive = false;
+
   // public gets for above variables
   public get scanResult() {
     return this.qrScanner.scanResult;
