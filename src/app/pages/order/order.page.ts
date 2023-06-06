@@ -1,7 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Restaurant, RestaurantInventory, RestaurantItem } from 'src/app/interfaces/restaurant.interface';
 import { QrScannerService } from '../../services/qr-scanner.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RestaurantModalComponent } from 'src/app/components/restaurant-modal/restaurant-modal.component';
 import { ModalController } from '@ionic/angular';
 
@@ -50,18 +49,6 @@ export class OrderPage {
     });
     modal.present();
   }
-  // async openModal() {
-  //   const modal = await this.modalCtrl.create({
-  //     component: ModalExampleComponent,
-  //   });
-  //   modal.present();
-
-  //   const { data, role } = await modal.onWillDismiss();
-
-  //   if (role === 'confirm') {
-  //     this.message = `Hello, ${data}!`;
-  //   }
-  // }
 
   /**
    * Methods below facilitate QR scanning

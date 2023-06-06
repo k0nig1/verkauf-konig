@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonModal } from '@ionic/angular';
+import { IonModal, ModalController } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
 
 @Component({
@@ -9,21 +9,19 @@ import { OverlayEventDetail } from '@ionic/core/components';
 })
 export class RestaurantModalComponent implements OnInit {
 
-  @ViewChild(IonModal) modal?: IonModal;
-
   message = 'This modal example uses triggers to automatically open a modal when the button is clicked.';
   name: string = "";
 
-  constructor() { }
+  constructor(private modal: ModalController) { }
 
   ngOnInit() { }
 
   cancel() {
-    this.modal?.dismiss(null, 'cancel');
+    this.modal.dismiss(null, 'cancel');
   }
 
   confirm() {
-    this.modal?.dismiss(this.name, 'confirm');
+    this.modal.dismiss(this.name, 'confirm');
   }
 
   onWillDismiss(event: Event) {
