@@ -1,14 +1,14 @@
 /**
- * Restaurant Interface
+ * Restaurant Interfaces
  */
 
-import { Inventory, InventoryItem, Store } from "./store.interface";
+import { Store, Inventory, InventoryItem } from "./store.interface";
 
 /**
  * Restaurant Interface
  */
 export interface Restaurant extends Store {
-    ratings: string[] | undefined;
+    ratings: string[]; // TODO: Rating[]
     inventory: RestaurantInventory;
 }
 
@@ -23,5 +23,5 @@ export interface RestaurantInventory extends Inventory {
  * Restaurant Item Interface
  */
 export interface RestaurantItem extends InventoryItem {
-    images: string[];
+    images: string[]; // TODO: Image[]
 }
