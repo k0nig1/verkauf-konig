@@ -1,12 +1,20 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Restaurant, RestaurantInventory, RestaurantItem } from 'src/app/interfaces/restaurant.interface';
 import { QrScannerService } from '../../services/qr-scanner.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RestaurantModalComponent } from 'src/app/components/restaurant-modal/restaurant-modal.component';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-order',
   templateUrl: 'order.page.html',
   styleUrls: ['order.page.scss']
 })
-
+/**
+ * OrderPage
+ * @class
+ * @classdesc This is a view to facilitate ordering 
+ */
 export class OrderPage {
 
   @ViewChild('video', { static: false }) video!: ElementRef;
@@ -16,41 +24,96 @@ export class OrderPage {
   qrScanner: QrScannerService;
   private _scanResult = "";
   private _scanActive = false;
+  private modalCtrl: ModalController;
 
-  // public gets for above variables
-  public get scanResult() {
-    return this.qrScanner.scanResult;
-  }
-
-  public get scanActive() {
-    return this.qrScanner.scanActive;
-  }
-
-  constructor(qrScanner: QrScannerService) {
+  /**
+   * OrderPage constructor
+   * @param qrScanner 
+   */
+  constructor(qrScanner: QrScannerService, modalCtrl: ModalController) {
     this.qrScanner = qrScanner;
+    this.modalCtrl = modalCtrl;
   }
 
+  /**
+   * ngAfterViewInit()
+   */
   ngAfterViewInit() {
     this.qrScanner.canvasElement = this.canvas.nativeElement;
     this.qrScanner.canvasContext = this.qrScanner.canvasElement.getContext('2d');
     this.qrScanner.videoElement = this.video.nativeElement;
   }
+
+  async showRestaurantModal() {
+    const modal = await this.modalCtrl.create({
+      component: RestaurantModalComponent
+    });
+    modal.present();
+  }
+  // async openModal() {
+  //   const modal = await this.modalCtrl.create({
+  //     component: ModalExampleComponent,
+  //   });
+  //   modal.present();
+
+  //   const { data, role } = await modal.onWillDismiss();
+
+  //   if (role === 'confirm') {
+  //     this.message = `Hello, ${data}!`;
+  //   }
+  // }
+
+  /**
+   * Methods below facilitate QR scanning
+   */
+
+  /**
+   * scanResult()
+   */
+  public get scanResult() {
+    return this.qrScanner.scanResult;
+  }
+
+  /**
+   * scanActive()
+   */
+  public get scanActive() {
+    return this.qrScanner.scanActive;
+  }
+
+  /**
+   * CaptureImage
+   * 
+   */
   captureImage() {
     this.qrScanner.captureImage(this.fileinput);
   }
 
+  /**
+   * startScan()
+   */
   startScan() {
     this.qrScanner.startScan();
   }
 
+  /**
+   * stopScan()
+   */
   stopScan() {
     this.qrScanner.stopScan();
   }
 
+  /**
+   * resetScan()
+   */
   reset() {
     this.qrScanner.reset();
   }
 
+  /**
+   * handleFile()
+   * @param Event ev 
+   */
   handleFile(ev: Event) {
     this.qrScanner.handleFile(ev);
   }

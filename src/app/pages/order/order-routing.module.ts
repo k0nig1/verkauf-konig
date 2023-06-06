@@ -6,12 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: OrderPage,
-  },
-  {
-    path: 'order',
-    loadChildren: () => import('./order.module').then(m => m.OrderPageModule)
   }
-
 ];
 
 @NgModule({
