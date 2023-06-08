@@ -18,7 +18,7 @@
     "@angular/common": "^16.0.0",
     "@angular/compiler": "^16.0.0",
     "@angular/core": "^16.0.0",
-    "@angular/fire": "^7.5.0",
+    "@angular/fire": "^7.0.4",
     "@angular/forms": "^16.0.0",
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
@@ -44,7 +44,7 @@
     "dir-glob": "^2.0.0",
     "firebase": "^9.22.0",
     "firebase-admin": "^11.8.0",
-    "firebase-tools": "^12.1.0",
+    "firebase-tools": "^0.1.6",
     "firebaseui": "^6.0.2",
     "globby": "^13.1.4",
     "ionicons": "^7.0.0",
@@ -56,7 +56,7 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.0.0",
+    "@angular-devkit/build-angular": "^15.2.8",
     "@angular-eslint/builder": "16.0.2",
     "@angular-eslint/eslint-plugin": "16.0.2",
     "@angular-eslint/eslint-plugin-template": "16.0.2",
