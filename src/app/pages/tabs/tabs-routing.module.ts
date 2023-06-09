@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('../order/order.module').then(m => m.OrderPageModule)
       },
       {
+        path: 'user-profile',
+        loadChildren: () => import('../user-profile/user-profile.module').then(m => m.UserProfilePageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/home',
         pathMatch: 'full'
