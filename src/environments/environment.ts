@@ -20,8 +20,8 @@ export const environment = {
     projectId: "verkaufk0nig-7be02",
     storageBucket: "verkaufk0nig-7be02.appspot.com",
     messagingSenderId: "482690049480",
-    appId: "1:482690049480:web:6db434c1e2460916854cfd",
-    measurementId: "G-WNXX5QJS79"
+    appId: "1:482690049480:web:aa14897087c1c96c854cfd",
+    measurementId: "G-P4634LC89W"
   }
 };
 

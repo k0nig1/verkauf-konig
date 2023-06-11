@@ -1,23 +1,14 @@
 {
-  "hosting": [
-    {
-      "public": "www",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-east1"
     },
-    {
-      "target": "app",
-      "source": ".",
-      "frameworksBackend": {}
-    }
-  ]
+    "site": "verkaufkonig-debug"
+  }
 }

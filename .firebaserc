@@ -1,14 +1,5 @@
 {
   "projects": {
     "default": "verkaufk0nig-7be02"
-  },
-  "targets": {
-    "verkaufk0nig-7be02": {
-      "hosting": {
-        "app": [
-          "verkaufk0nig-7be02"
-        ]
-      }
-    }
   }
 }
