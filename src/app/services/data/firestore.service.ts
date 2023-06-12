@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Firestore, addDoc, getDoc, collection, collectionData, doc, docData } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection, collectionData, doc, docData, deleteDoc } from '@angular/fire/firestore';
 import { RestaurantInterface } from 'src/app/models/restaurant.interface';
 import { Observable } from 'rxjs';
 
@@ -59,11 +59,16 @@ export class FirestoreService {
 
   }
 
-  getRestaurantDetail(restaurantId: string | null): Observable<RestaurantInterface> {
+  getRestaurantDetail(restaurantId: string): Observable<RestaurantInterface> {
     const restaurantRef = doc(this.firestore, `${DataCollections.restaurants}/${restaurantId}`);
     return docData(restaurantRef, {
       idField: 'id'
     }) as Observable<RestaurantInterface>;
 
+  }
+
+  deleteRestaurant(id: string): Promise<void> {
+    const restaurantDocRef = doc(this.firestore, `${DataCollections.restaurants}/${id}`);
+    return deleteDoc(restaurantDocRef);
   }
 }
