@@ -2,7 +2,7 @@
  * Restaurant Interface
  */
 export interface RestaurantInterface {
-    id: any;
+    id: string;
     name: string;
     inventory: RestaurantInventoryInterface | null;
 }
@@ -11,7 +11,7 @@ export interface RestaurantInterface {
  * Restaurant Inventory Interface
  */
 export interface RestaurantInventoryInterface {
-    id: any;
+    id: string;
     items: RestaurantItemInterface[] | null;
 }
 
@@ -19,7 +19,7 @@ export interface RestaurantInventoryInterface {
  * Restaurant Item Interface
  */
 export interface RestaurantItemInterface {
-    id: any;
+    id: string;
     name: string;
     description: RestaurantItemDescriptionInterface | null;
 }
@@ -28,5 +28,5 @@ export interface RestaurantItemInterface {
  * Restaurant Item Interface
  */
 export interface RestaurantItemDescriptionInterface {
-    id: any;
+    id: string;
 }

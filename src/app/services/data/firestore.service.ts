@@ -1,8 +1,11 @@
 import { Injectable, inject } from '@angular/core';
-import { Firestore, addDoc, getDoc, collection, collectionData } from '@angular/fire/firestore';
+import { Firestore, addDoc, getDoc, collection, collectionData, doc, docData } from '@angular/fire/firestore';
 import { RestaurantInterface } from 'src/app/models/restaurant.interface';
 import { Observable } from 'rxjs';
 
+/**
+ * Enumeration of hardcoded firebase collections
+ */
 enum DataCollections {
   restaurants = 'restaurants'
 }
@@ -12,32 +15,55 @@ enum DataCollections {
 })
 export class FirestoreService {
 
-  firestore: Firestore = inject(Firestore);
+  private firestore: Firestore = inject(Firestore);
+  private data: Observable<RestaurantInterface[]> | null = null;
 
   constructor() { }
+  /**
+   * 
+   * @param restaurant 
+   * @returns Promise<any>
+   */
+  createRestaurant(name: string): Promise<any> {
+    var inventory = null;
 
-  createRestaurant(restaurant: RestaurantInterface): Promise<any> {
-    const restaurantCollection = collection(this.firestore, DataCollections.restaurants)
-    return addDoc(restaurantCollection, { restaurant });
+    const restaurantCollection = collection(this.firestore, DataCollections.restaurants);
+    return addDoc(restaurantCollection, <RestaurantInterface>{
+      name,
+      inventory
+    });
   }
 
+  /**
+   * 
+   * @returns Observable<RestaurantInterface[] or undefined>
+   */
   readRestaurants(): Observable<RestaurantInterface[]> | undefined {
-    let data: Observable<RestaurantInterface[]>;
 
     try {
       const restaurantCollection = collection(this.firestore, DataCollections.restaurants);
 
-      data = collectionData(restaurantCollection, {
+      console.log("restaurantCollection: " + restaurantCollection);
+
+      this.data = collectionData(restaurantCollection, {
         idField: 'id'
       }) as Observable<RestaurantInterface[]>;
 
-      console.log("Data: " + data);
-      return data;
+      console.log("Data: " + this.data);
+      return this.data;
     }
     catch (ex) {
       console.error(ex);
-      data = new Observable<RestaurantInterface[]>;
       return undefined;
     }
+
+  }
+
+  getRestaurantDetail(restaurantId: string | null): Observable<RestaurantInterface> {
+    const restaurantRef = doc(this.firestore, `${DataCollections.restaurants}/${restaurantId}`);
+    return docData(restaurantRef, {
+      idField: 'id'
+    }) as Observable<RestaurantInterface>;
+
   }
 }

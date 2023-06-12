@@ -3,19 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ConfigPage } from './config.page';
 
+import { RestaurantPageRoutingModule } from '../restaurant/restaurant/restaurant-routing.module';
+
 const routes: Routes = [
   {
     path: '',
     component: ConfigPage
   },
   {
-    path: 'create-restaurant',
-    loadChildren: () => import('./pages/create-restaurant/create-restaurant.module').then( m => m.CreateRestaurantPageModule)
-  },
-  {
-    path: 'read-restaurant',
-    loadChildren: () => import('./pages/read-restaurant/read-restaurant.module').then( m => m.ReadRestaurantPageModule)
+    path: 'restaurant',
+    loadChildren: () => import('../restaurant/restaurant/restaurant.module').then(m => m.RestaurantPageModule)
   }
+
 ];
 
 @NgModule({

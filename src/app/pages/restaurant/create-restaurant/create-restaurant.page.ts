@@ -32,40 +32,24 @@ export class CreateRestaurantPage implements OnInit {
   async createRestaurant() {
     const loading = await this.loadingCtrl.create();
 
-    const restaurant: Restaurant = {
-      id: (Math.random() * 10000) / (Math.random() * 10),
-      name: this.createRestaurantForm.value.restaurantName,
-      inventory: null
-    }
-
-
-    this.firestoreService.createRestaurant(restaurant)
+    this.firestoreService.createRestaurant(
+      this.createRestaurantForm.value.restaurantName
+    )
       .then(
         () => {
           loading.dismiss();
-          this.router.navigate(['/tabs/config']);
         },
         (reason) => {
           console.error(reason);
+        }
+      )
+      .finally(
+        () => {
+          this.router.navigate(['/tabs/config/restaurant']);
         }
       )
 
     return await loading.present();
   }
 
-}
-
-class Restaurant implements RestaurantInterface {
-  id: any;
-  name: string = "";
-  inventory = null;
-
-  constructor() { }
-}
-
-class RestaurantInventory implements RestaurantInventoryInterface {
-  id: any;
-  items = null;
-
-  constructor(name: string) { }
 }

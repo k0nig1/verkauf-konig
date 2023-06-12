@@ -4,40 +4,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Config</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div class="ion-padding">
-    <h2>We want...</h2>
-    <ul>
-      <li>Restaurant CRUD</li>
-      <ion-button [routerLink]="['create-restaurant']" expand="block">
-        <ion-label stacked>Create Restaurant</ion-label>
-      </ion-button>
+  <ion-button [routerLink]="['restaurant']" expand="block">
+    <ion-label stacked>Restaurant</ion-label>
+  </ion-button>
 
-      <ion-button [routerLink]="['read-restaurant']" expand="block">
-        <ion-label stacked>Read Restaurant</ion-label>
-      </ion-button>
-
-      <li>Inventory CRUD</li>
-
-      <li>Description CRUD... Maybe?</li>
-      <ul>
-        <li>Description might not need it's own class</li>
-      </ul>
-
-    </ul>
-  </div>
-
-  <!--Create Restaurant-->
-
-
-  <!--Read Restaurant-->
-  <!--Update Restaurant-->
-  <!--Delete Restaurant-->
+  <ion-button expand="block" disabled="true">
+    <ion-label stacked>User</ion-label>
+  </ion-button>
 
 </ion-content>

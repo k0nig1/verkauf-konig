@@ -17,11 +17,11 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list *ngFor="let restaurant of restaurants | async">
+  <ion-list *ngFor="let restaurant of restaurants | async"
+    routerLink="/tabs/config/restaurant/detail/{{restaurant.id}}">
     <ion-item>
       <ion-label>
         <h2>{{ restaurant.name }}</h2>
-        <p>{{ restaurant.id }}</p>
       </ion-label>
     </ion-item>
   </ion-list>

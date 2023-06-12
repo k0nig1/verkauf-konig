@@ -8,7 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 export class TabsPage {
 
-  isProduction = environment.production;
+  // isProduction = environment.production;
+  isProduction = false;
 
   constructor() { }
 
