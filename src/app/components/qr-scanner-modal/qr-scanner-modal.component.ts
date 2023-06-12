@@ -44,15 +44,6 @@ export class QrScannerModalComponent implements OnInit {
     await alert.present();
   }
 
-  async presentUnsupported() {
-    const alert = await this.alertController.create({
-      header: 'Not Supported',
-      message: 'Currently only iOS and Android modes are supported.',
-      buttons: ['OK'],
-    });
-    await alert.present();
-  }
-
   dismissModal() {
     this.modalCtrl.dismiss();
   }
