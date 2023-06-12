@@ -1,0 +1,30 @@
+<ion-text *ngIf="!scanActive && !scanResult">
+  <h1>Scan a QR Code to see the menu</h1>
+</ion-text>
+
+<!-- Shows our camera stream -->
+<video #video [hidden]="!scanActive" width="100%"></video>
+
+<!-- Used to render the camera stream images -->
+<canvas #canvas hidden></canvas>
+
+<ion-card *ngIf="scanResult">
+  <ion-card-header>
+    <ion-card-title>QR scan result</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{ scanResult }}
+  </ion-card-content>
+</ion-card>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="center">
+
+  <ion-fab-button (click)="stopScan()" color="danger" *ngIf="scanActive">
+    <ion-icon name="stop-outline"></ion-icon>
+  </ion-fab-button>
+
+  <ion-fab-button (click)="reset()" *ngIf="scanResult" color="warning">
+    <ion-icon name="refresh-outline"></ion-icon>
+  </ion-fab-button>
+
+</ion-fab>
