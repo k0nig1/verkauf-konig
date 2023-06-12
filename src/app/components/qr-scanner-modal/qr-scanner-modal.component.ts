@@ -1,6 +1,6 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { ModalController } from '@ionic/angular';
-import { QrScannerService } from 'src/app/services/qr-scanner.service';
+import { Component, OnInit } from '@angular/core';
+import { Barcode, BarcodeScanner } from '@capacitor-mlkit/barcode-scanning';
+import { AlertController, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-qr-scanner-modal',
@@ -8,89 +8,52 @@ import { QrScannerService } from 'src/app/services/qr-scanner.service';
   styleUrls: ['./qr-scanner-modal.component.scss'],
 })
 export class QrScannerModalComponent implements OnInit {
+  isSupported = false;
+  barcodes: Barcode[] = [];
 
-  @ViewChild('video', { static: false }) video!: ElementRef;
-  @ViewChild('canvas', { static: false }) canvas!: ElementRef;
-  @ViewChild('fileinput', { static: false }) fileinput!: ElementRef;
+  constructor(private alertController: AlertController, private modalCtrl: ModalController) { }
 
-  qrScanner: QrScannerService;
-  private _scanResult = "";
-  private _scanActive = false;
-  private modalCtrl: ModalController;
-
-  /**
-   * OrderPage constructor
-   * @param qrScanner 
-   */
-  constructor(qrScanner: QrScannerService, modalCtrl: ModalController) {
-    this.qrScanner = qrScanner;
-    this.modalCtrl = modalCtrl;
+  ngOnInit() {
+    BarcodeScanner.isSupported().then((result) => {
+      this.isSupported = result.supported
+    });
   }
 
-  ngOnInit(): void { }
-  /**
-   * ngAfterViewInit()
-   */
-  ngAfterViewInit() {
-    this.qrScanner.canvasElement = this.canvas.nativeElement;
-    this.qrScanner.canvasContext = this.qrScanner.canvasElement.getContext('2d');
-    this.qrScanner.videoElement = this.video.nativeElement;
-    this.startScan();
+  async scan(): Promise<void> {
+    const granted = await this.requestPermissions();
+    if (!granted) {
+      this.presentAlert();
+      return;
+    }
+    const { barcodes } = await BarcodeScanner.scan();
+    this.barcodes.push(...barcodes);
+    this.dismissModal();
   }
 
-  /**
-   * Methods below facilitate QR scanning
-   */
-
-  /**
-   * scanResult()
-   */
-  public get scanResult() {
-    return this.qrScanner.scanResult;
+  async requestPermissions(): Promise<boolean> {
+    const { camera } = await BarcodeScanner.requestPermissions();
+    return camera === 'granted' || camera === 'limited';
   }
 
-  /**
-   * scanActive()
-   */
-  public get scanActive() {
-    return this.qrScanner.scanActive;
+  async presentAlert(): Promise<void> {
+    const alert = await this.alertController.create({
+      header: 'Permission denied',
+      message: 'Please grant camera permission to use the barcode scanner.',
+      buttons: ['OK'],
+    });
+    await alert.present();
   }
 
-  /**
-   * CaptureImage
-   * 
-   */
-  captureImage() {
-    this.qrScanner.captureImage(this.fileinput);
+  async presentUnsupported() {
+    const alert = await this.alertController.create({
+      header: 'Not Supported',
+      message: 'Currently only iOS and Android modes are supported.',
+      buttons: ['OK'],
+    });
+    await alert.present();
   }
 
-  /**
-   * startScan()
-   */
-  startScan() {
-    this.qrScanner.startScan();
-  }
-
-  /**
-   * stopScan()
-   */
-  stopScan() {
-    this.qrScanner.stopScan();
+  dismissModal() {
     this.modalCtrl.dismiss();
-  }
-
-  /**
-   * resetScan()
-   */
-  reset() {
-    this.qrScanner.reset();
-  }
-
-  /**
-   * handleFile()
-   * @param Event ev 
-   */
-  handleFile(ev: Event) {
-    this.qrScanner.handleFile(ev);
   }
 }
