@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{restaurant?.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">{{restaurant?.name}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <h1>Details for {{restaurant?.name}}</h1>
+
+  <h3>About</h3>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde saepe sequi fugiat quas eos pariatur architecto
+    reprehenderit suscipit a possimus! Vero ad quia pariatur soluta hic optio error placeat autem?</p>
+
+  <h3>Menus</h3>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At atque quia, commodi possimus vero sapiente nisi
+    maiores quis fugiat eveniet aliquid alias esse ipsum. Perferendis dicta at nisi aspernatur consectetur!</p>
+
+  <ion-button color="danger" expand="block" (click)="deleteRestaurant(restaurant?.id, restaurant?.name)">
+    DELETE RESTAURANT
+  </ion-button>
+</ion-content>

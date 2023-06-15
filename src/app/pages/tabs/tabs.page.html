@@ -7,7 +7,17 @@
       <ion-label>Home</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="order">
+    <ion-tab-button tab="about">
+      <ion-icon aria-hidden="true" name="aperture-outline"></ion-icon>
+      <ion-label>About</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="config" *ngIf="!isProduction">
+      <ion-icon aria-hidden="true" name="cog-outline"></ion-icon>
+      <ion-label>Config</ion-label>
+    </ion-tab-button>
+
+    <!-- <ion-tab-button tab="order">
       <ion-icon aria-hidden="true" name="fast-food-outline"></ion-icon>
       <ion-label>Order</ion-label>
     </ion-tab-button>
@@ -15,7 +25,7 @@
     <ion-tab-button tab="user-profile">
       <ion-icon aria-hidden="true" name="fast-food-outline"></ion-icon>
       <ion-label>Profile</ion-label>
-    </ion-tab-button>
+    </ion-tab-button> -->
 
   </ion-tab-bar>
 

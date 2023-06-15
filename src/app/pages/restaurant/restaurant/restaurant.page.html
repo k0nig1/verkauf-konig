@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Configure Restaurant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">Configure Restaurant</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-button [routerLink]="['create']" expand="block">
+    <ion-label stacked>Create Restaurant</ion-label>
+  </ion-button>
+
+  <ion-button [routerLink]="['read']" expand="block">
+    <ion-label stacked>Read Restaurants</ion-label>
+  </ion-button>
+
+</ion-content>

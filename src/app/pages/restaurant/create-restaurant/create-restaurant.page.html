@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>CreateRestaurant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">CreateRestaurant</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form [formGroup]="createRestaurantForm" (submit)="createRestaurant()">
+
+    <ion-item>
+      <ion-label stacked>Restaurant Name</ion-label>
+      <ion-input formControlName="restaurantName" type="text" placeholder="What's this restaurant called?">
+      </ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!createRestaurantForm.valid">
+      Add Restaurant
+    </ion-button>
+  </form>
+
+</ion-content>
