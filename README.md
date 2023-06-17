@@ -34,4 +34,4 @@ None yet!
 Diagram Files are draw.io and can be found in /diagrams.
 ## Restaurant Ordering
 ![Ordering Use Case: https://github.com/k0nig1/verkauf-konig/blob/main/diagrams/OrderingUseCase.drawio]
-(https://github.com/k0nig1/verkauf-konig/blob/main/diagrams/OrderingUseCase.drawio)
+(https://github.com/k0nig1/verkauf-konig/blob/main/diagrams/OrderingUseCase.drawio.png)
