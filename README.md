@@ -31,7 +31,12 @@ To learn more about AngularJS: https://docs.angularjs.org/guide
 None yet!
 
 # Diagrams
-Diagram Files are draw.io and can be found in /diagrams.
+Diagram Files are draw.io and can be found in [diagrams](https://github.com/k0nig1/verkauf-konig/tree/orderingUseCase/diagrams).
 ## Ordering Use Case
 ![Ordering Use Case: (https://github.com/k0nig1/verkauf-konig/blob/main/diagrams/OrderingUseCase.drawio.png)](https://github.com/k0nig1/verkauf-konig/blob/main/diagrams/OrderingUseCase.drawio.png)
-
+## Ordering Activity
+![Ordering Activity Diagram](https://github.com/k0nig1/verkauf-konig/blob/orderingUseCase/diagrams/exportedImages/OrderingUseCase-Activity.drawio.png)
+## Ordering Sequence
+![Ordering Sequence Diagram](https://github.com/k0nig1/verkauf-konig/blob/orderingUseCase/diagrams/exportedImages/OrderingUseCase-Sequence.drawio.png)
+## Sitemap
+![Sitemap Diagram](https://github.com/k0nig1/verkauf-konig/blob/orderingUseCase/diagrams/exportedImages/OrderingUseCase-Sitemap.drawio.png)
