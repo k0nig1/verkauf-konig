@@ -30,6 +30,7 @@ None yet!
 
 # Diagrams
 Diagram Files are draw.io and can be found in [diagrams](https://github.com/k0nig1/verkauf-konig/tree/orderingUseCase/diagrams).
+**This app is in development, and thus designs are subject to change (a lot).** ***Any input is welcome.***
 
 ## Ordering Use Case
 ![Overall Ordering Use Case](https://github.com/k0nig1/verkauf-konig/blob/main/diagrams/exportedImages/OrderingUseCase-OverallUseCase.drawio.png)
