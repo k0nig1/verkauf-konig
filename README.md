@@ -34,7 +34,7 @@ None yet!
 Diagram Files are draw.io and can be found in [diagrams](https://github.com/k0nig1/verkauf-konig/tree/orderingUseCase/diagrams).
 
 ## Ordering Use Case
-![Ordering Use Case Diagram](https://github.com/k0nig1/verkauf-konig/blob/main/diagrams/exportedImages/OrderingUseCase.drawio.png)
+![Ordering Use Case Diagram](https://github.com/k0nig1/verkauf-konig/blob/main/diagrams/exportedImages/OrderingUseCase-OverallUseCase.drawio.png)
 ## Ordering Activity
 ![Ordering Activity Diagram](https://github.com/k0nig1/verkauf-konig/blob/main/diagrams/exportedImages/OrderingUseCase-Activity.drawio.png)
 ## Ordering Sequence
