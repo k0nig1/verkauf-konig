@@ -12,8 +12,6 @@ Ionic: https://ionicframework.com/docs/intro/cli
 
 VSCode: https://code.visualstudio.com/
 
-VSCode Ionic Extension: https://marketplace.visualstudio.com/items?itemName=ionic.ionic
-
 ~~~bash
 # to install needed node packages
 npm install
